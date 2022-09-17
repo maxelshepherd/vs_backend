@@ -1,0 +1,19 @@
+GET http://localhost:3000/sensors
+
+###
+
+GET http://localhost:3000/sensors?name=dev
+
+###
+
+POST http://localhost:3000/sensors
+Content-Type: application/json
+
+{
+    "name": "dev",
+    "data": "0000000000"
+}
+
+###
+
+DELETE  http://localhost:3000/sensors/6326551bddf59d5e2f063181
