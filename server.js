@@ -2,6 +2,7 @@ require('dotenv').config()
 
 const express = require('express')
 const app = express()
+app.get('/', (req, res) => {res.json({message : 'Welcome to Virtual Shepard API!'})})
 const mongoose = require('mongoose')
 
 mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true })
