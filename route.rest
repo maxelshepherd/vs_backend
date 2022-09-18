@@ -10,10 +10,10 @@ POST http://localhost:3000/sensors
 Content-Type: application/json
 
 {
-    "name": "dev",
+    "sid": "dev",
     "data": "0000000000"
 }
 
 ###
 
-DELETE  http://localhost:3000/sensors/6326551bddf59d5e2f063181
+DELETE  http://localhost:3000/sensors/632659579af8e98f51e47efa

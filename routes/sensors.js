@@ -20,7 +20,7 @@ router.get('/:id', getSensor, (req, res) => {
 //Creating one
 router.post('/', async (req, res) => {
     const sensor = new Sensor({
-        name: req.body.name, 
+        sid: req.body.sid, 
         data: req.body.data
     })
 
