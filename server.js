@@ -12,7 +12,7 @@ db.on('open', () => console.log('Connected to Database'))
 app.use(express.json())
 
 const sensorsRouter = require('./routes/sensors')
-app.use('/sensors', sensorsRouter)
+app.use('/api/sensors', sensorsRouter)
 
-app.listen(3000, () => console.log('Server Started'))
+app.listen(process.env.PORT, () => console.log('Server Started'))
 

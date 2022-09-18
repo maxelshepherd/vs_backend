@@ -1,12 +1,12 @@
-GET http://localhost:3000/sensors
+GET http://localhost:8080/api/sensors
 
 ###
 
-GET http://localhost:3000/sensors?name=dev
+GET http://localhost:8080/api/sensors?name=dev
 
 ###
 
-POST http://localhost:3000/sensors
+POST http://localhost:8080/api/sensors
 Content-Type: application/json
 
 {
@@ -16,4 +16,4 @@ Content-Type: application/json
 
 ###
 
-DELETE  http://localhost:3000/sensors/632659579af8e98f51e47efa
+DELETE  http://localhost:8080/api/sensors/632748fad70ef4ca91e3e8b1
