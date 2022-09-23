@@ -16,4 +16,8 @@ Content-Type: application/json
 
 ###
 
-DELETE  http://localhost:8080/api/sensors/632748fad70ef4ca91e3e8b1
+DELETE  http://localhost:8080/api/sensors/632be359f5fd78bc1a8f0c9c
+
+###
+
+DELETE  http://localhost:8080/api/sensors
