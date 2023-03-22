@@ -1,8 +1,8 @@
-GET http://localhost:8080/api/sensors
+GET http://localhost:8080/api/sensors?limit=5
 
 ###
 
-GET http://localhost:8080/api/sensors?name=dev
+GET http://localhost:8080/api/sensors?sid=test
 
 ###
 
@@ -21,3 +21,36 @@ DELETE  http://localhost:8080/api/sensors/632be359f5fd78bc1a8f0c9c
 ###
 
 DELETE  http://localhost:8080/api/sensors
+
+###
+
+GET http://localhost:8080/api/configs
+
+###
+
+GET http://localhost:8080/api/configs/641a31fec4a9cc1fe168bd2a
+
+###
+
+
+PATCH  http://localhost:8080/api/configs/641a31fec4a9cc1fe168bd2a
+Content-Type: application/json
+
+{
+    "data": "0 0 0 0 0 0"
+}
+
+
+###
+
+
+
+POST http://localhost:8080/api/configs
+Content-Type: application/json
+
+{
+    "sid": "dev",
+    "data": "0 0 0 0 0 0"
+}
+
+
