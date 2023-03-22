@@ -1,16 +1,17 @@
 {
   "name": "virtual-shepard",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "devStart": "nodemon server.js"
+    "devStart": "nodemon server.js",
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.0.3",
     "express": "^4.18.1",
-    "mongoose": "^6.6.1",
-    "dotenv": "^16.0.2"
-  }
+    "mongoose": "^6.6.1"
+  },
+  "description": ""
 }

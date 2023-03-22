@@ -5,7 +5,8 @@ const Sensor = require('../models/sensor')
 //Getting all sensors
 router.get('/', async (req, res) => {
     try{
-        const sensors = await Sensor.find()
+        const limit = req.query.limit || 1000;
+        const sensors = await Sensor.find().sort({timestamp: -1}).limit(parseInt(limit));
         res.json(sensors)
     }catch (err){
         res.status(500).json({ message: err.message})
