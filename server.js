@@ -1,7 +1,11 @@
 require('dotenv').config()
+var morgan = require('morgan')
+
 
 const express = require('express')
 const app = express()
+app.use(morgan('combined'))
+
 app.get('/', (req, res) => {res.json({message : 'Welcome to Virtual Shepard API!'})})
 const mongoose = require('mongoose')
 
@@ -19,4 +23,5 @@ app.use('/api/sensors', sensorsRouter)
 app.use('/api/configs', configsRouter)
 
 app.listen(process.env.PORT, () => console.log('Server Started'))
+
 
