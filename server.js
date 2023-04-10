@@ -6,12 +6,7 @@ const express = require('express')
 const app = express()
 app.use(morgan('combined'))
 
-app.get('/', (req, res) => {res.json({message : 'Welcome to Virtual Shepard API!' + __dirname})})
-//or using direct file URI
-app.get('/download', function(req, res){
-    var file = __dirname + '/log.txt';
-    res.download(file);
-  });
+app.get('/', (req, res) => {res.json({message : 'Welcome to Virtual Shepard API!'})})
 
 const mongoose = require('mongoose')
 
