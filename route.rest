@@ -9,10 +9,13 @@ GET http://localhost:8080/api/sensors?sid=test
 POST http://localhost:8080/api/sensors
 Content-Type: application/json
 
-{
-    "sid": "dev",
-    "data": "0000000000"
-}
+{"sid":"DEVICE_ID","data":"000000001 005 10 03 123 23 41 11 10.00 0000 0.000000000 0.000000000"}
+
+###
+POST https://vspoc-app-8hpfz.ondigitalocean.app/api/sensors
+Content-Type: application/json
+
+{"sid":"DEVICE_ID","data":"000000001 005 10 03 123 23 41 11 10.00 0000 0.000000000 0.000000000"}
 
 ###
 
