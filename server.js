@@ -1,10 +1,15 @@
 require('dotenv').config()
 var morgan = require('morgan')
 
+morgan.token('body', req => {
+  return JSON.stringify(req.body)
+})
+
 
 const express = require('express')
 const app = express()
-app.use(morgan('combined'))
+
+app.use(morgan(':method :url :body'))
 
 app.get('/', (req, res) => {res.json({message : 'Welcome to Virtual Shepard API!'})})
 
