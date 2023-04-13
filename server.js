@@ -5,11 +5,15 @@ morgan.token('body', req => {
   return JSON.stringify(req.body)
 })
 
+morgan.token('req-headers', function(req, res){
+  return JSON.stringify(req.headers)
+ })
+
 
 const express = require('express')
 const app = express()
 
-app.use(morgan(':method :url :body'))
+app.use(morgan(':method :url :req-headers :body'))
 
 app.get('/', (req, res) => {res.json({message : 'Welcome to Virtual Shepard API!'})})
 
